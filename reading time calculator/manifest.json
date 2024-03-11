@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Reading time Calculator",
+  "version": "1.0",
+  "description": "Add the reading time to Chrome Extension documentation articles",
+  
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "commands": { "_execute_action": { "suggested_key": { "default": "Ctrl+Shift+F" } } },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
